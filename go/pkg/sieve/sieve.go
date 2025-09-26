@@ -51,4 +51,4 @@ func (s *Finder) NthPrime(n int64) int64 {
 }
 
 // testing takes 9.5+ seconds. look into ways to speed it up
-// possible options: cache known primes, optimize for loops.
+// possible options: cache known primes, optimize for loops, pprof
