@@ -23,10 +23,9 @@ func (s *Finder) NthPrime(n int64) int64 {
 		return 0
 	}
 
-	// primesList[i] will be true if i is a composite number.
+	// primesList[i] will be true if i is a non prime number.
 	primesList := make([]bool, ceiling+1)
-	primesList[0] = true
-	primesList[1] = true
+	primesList[0], primesList[1] = true, true
 
 	// sets tp true if prime
 	for num := 2; num*num <= ceiling; num++ {
@@ -52,3 +51,4 @@ func (s *Finder) NthPrime(n int64) int64 {
 }
 
 // testing takes 9.5+ seconds. look into ways to speed it up
+// possible options: cache known primes, optimize for loops.
